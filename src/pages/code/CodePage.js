@@ -75,6 +75,14 @@ function CodePage(props) {
                 })
                 fetchAllCode();
             })
+            .catch(err=>{
+                toast.error("Voucher đã được sử dụng. Không xóa được !", {
+                    position: "top-right",
+                    autoClose: 3000,
+                    closeOnClick: true,
+                    pauseOnHover: true
+                })
+            })
     }
 
     const handleAddCode = (data) => {
